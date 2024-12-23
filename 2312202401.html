@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qodegen News - Stay updated with the latest and verified news.">
+    <meta name="keywords" content="News, Media, Updates, Breaking News">
+    <meta name="author" content="Qodegen Media">
+    <title>Qodegen News Page</title> <!-- Page Title Added -->
+    <!-- Ensure Font Awesome is correctly linked -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+            background: #f5f5f5;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            flex-shrink: 0;
+        }
+
+        .logoWrapper {
+            color: #580000;
+            font-size: calc(1rem + 1vw);
+            font-weight: bold;
+        }
+
+        .headerIcons {
+            display: flex;
+            align-items: center;
+        }
+
+        .homeIcon, .aboutIcon {
+            font-size: 0.9rem; /* Further decrease the icon size */
+            color: #580000;
+            cursor: pointer;
+            text-decoration: none;
+            margin-left: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .homeIcon:hover, .aboutIcon:hover {
+            color: #880000;
+        }
+
+        .headerIcons span {
+            margin-left: 5px; /* Add space between the icon and text */
+            font-size: 0.8rem; /* Smaller text size */
+            color: #580000;
+        }
+
+        /* Image Section */
+        .newsThumbWrapper {
+            position: relative;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f0f0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .newsThumb {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Content Section */
+        .newsContent {
+            padding: 20px;
+            background: #fff;
+            flex-grow: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .newsMeta {
+            font-size: calc(0.8rem + 0.2vw);
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .newsMeta span:first-child {
+            color: #580000;
+            font-weight: bold;
+        }
+
+        .newsHeader {
+            font-size: calc(1.2rem + 0.4vw);
+            font-weight: bold;
+            color: #580000;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .newsHeader span {
+            font-weight: normal;
+            color: #333;
+        }
+
+        .newsTitle {
+            font-size: calc(1.5rem + 0.5vw);
+            font-weight: bold;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            color: #333;
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+
+        .newsTitle:hover {
+            color: #880000;
+            text-decoration: underline;
+        }
+
+        .newsSummary {
+            font-size: calc(1rem + 0.2vw);
+            line-height: 1.5;
+            color: #555;
+        }
+
+        /* Footer Section */
+        footer {
+            position: sticky;
+            bottom: 0;
+            background: #fff;
+            border-top: 1px solid #ddd;
+            color: #580000;
+            text-align: center;
+            padding: 10px;
+            flex-shrink: 0;
+        }
+
+        .versionFooter {
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .footerContent {
+            font-size: calc(0.8rem + 0.2vw);
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .newsContent {
+                padding: 15px;
+            }
+
+            .newsTitle {
+                font-size: calc(1.2rem + 0.5vw);
+            }
+
+            .newsSummary {
+                font-size: calc(0.9rem + 0.2vw);
+            }
+
+            .newsThumbWrapper {
+                height: 40%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .newsSummary {
+                font-size: calc(0.8rem + 0.2vw);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="logoWrapper">Qodegen Media</div>
+        <!-- Icons Section -->
+        <div class="headerIcons">
+            <!-- Home Icon -->
+            <a href="#" class="homeIcon">
+                <i class="fas fa-house-user"></i><span>Home</span>
+            </a>
+            <!-- About Icon -->
+            <a href="#about" class="aboutIcon">
+                <i class="fas fa-info-circle"></i><span>About</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Image Section -->
+    <div class="newsThumbWrapper">
+        <img src="https://d1uy1wopdv0whp.cloudfront.net/newsimages/news_122024/1734868489416_50099742-normal-WIFI.webp" 
+             class="newsThumb" 
+             alt="Thumbnail depicting the news topic" 
+             loading="lazy">
+    </div>
+
+    <!-- Content Section -->
+    <div class="newsContent">
+        <div class="newsMeta">
+            <span>News</span> <span>December 23, 2024</span>
+        </div>
+        <h2 class="newsTitle">రాజవొమ్మంగి: చుక్కల జింక మాంసం స్వాధీనం</h2>
+        <p class="newsSummary">
+            రాజవొమ్మంగి మండలం ముంజవరప్పాడు గ్రామంలో చుక్కల జింక మాంసం స్వాధీనం చేసుకుని 
+            నలుగురు నిందితులపై వన్యప్రాణుల చట్టం-1972 కింద కేసు నమోదు చేసామని 
+            అటవీ శాఖ అధికారి రాము ఆదివారం మీడియాకు తెలిపారు. నిందితులను 
+            అదుపులోకి తీసుకుని విచారిస్తున్నామని తెలిపారు. అడవి జంతువుల వేటాడితే 
+            కఠిన చర్యలు తప్పవని రాజవొమ్మంగి రేంజ్ అటవీ శాఖ అధికారులు హెచ్చరించారు.
+        </p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="versionFooter">Version - 1.2</div>
+        <div class="footerContent">© 2024 Qodegen Media. All rights reserved.</div>
+    </footer>
+</body>
+</html>
