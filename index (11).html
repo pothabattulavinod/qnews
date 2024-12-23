@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qodegen News - Stay updated with the latest and verified news.">
+    <meta name="keywords" content="News, Media, Updates, Breaking News">
+    <meta name="author" content="Qodegen Media">
+    <title>Qodegen News Page</title>
+    <!-- Ensure Font Awesome is correctly linked -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            width: 100vw;
+            background: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            flex-shrink: 0;
+        }
+
+        .logoWrapper {
+            color: #580000;
+            font-size: calc(1rem + 1vw);
+            font-weight: bold;
+        }
+
+        .headerIcons {
+            display: flex;
+            align-items: center;
+        }
+
+        .homeIcon, .aboutIcon {
+            font-size: 0.9rem;
+            color: #580000;
+            cursor: pointer;
+            text-decoration: none;
+            margin-left: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .homeIcon:hover, .aboutIcon:hover {
+            color: #880000;
+        }
+
+        .headerIcons span {
+            margin-left: 5px;
+            font-size: 0.8rem;
+            color: #580000;
+        }
+
+        /* News List Section */
+        .newsList {
+            padding: 20px;
+            flex-grow: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .newsItem {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd; /* Border added */
+            border-radius: 8px;
+            background: transparent; /* Removed background color */
+            transition: box-shadow 0.3s;
+            align-items: center;
+        }
+
+        .newsItem:hover {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Only shadow, no bright effect */
+        }
+
+        .newsItem img {
+            width: 30%; /* Image size set to 30% of parent element width */
+            height: auto;
+            object-fit: cover;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+
+        /* Align Text and Image in One Line */
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-grow: 1;
+        }
+
+        .content .text {
+            flex-grow: 1;
+        }
+
+        .newsTitle {
+            font-size: calc(1.3rem + 0.3vw);
+            color: #580000;
+            margin-bottom: 10px;
+        }
+
+        .newsMeta {
+            font-size: calc(0.8rem + 0.2vw);
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .newsMeta span:first-child {
+            color: #580000;
+            font-weight: bold;
+        }
+
+        .newsSummary {
+            font-size: calc(1rem + 0.2vw);
+            line-height: 1.5;
+            color: #555;
+        }
+
+        /* Footer Section */
+        footer {
+            position: relative;
+            width: 100%;
+            background: transparent; /* Removed background color */
+            border-top: 1px solid #ddd;
+            color: #580000;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+            flex-shrink: 0;
+        }
+
+        .versionFooter {
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .footerContent {
+            font-size: calc(0.8rem + 0.2vw);
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .newsItem h3 {
+                font-size: calc(1.2rem + 0.3vw);
+            }
+
+            .newsSummary {
+                font-size: calc(0.9rem + 0.2vw);
+            }
+
+            .newsList {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .newsSummary {
+                font-size: calc(0.8rem + 0.2vw);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="logoWrapper">Qodegen Media</div>
+        <!-- Icons Section -->
+        <div class="headerIcons">
+            <!-- Home Icon -->
+            <a href="#" class="homeIcon">
+                <i class="fas fa-house-user"></i><span>Home</span>
+            </a>
+            <!-- About Icon -->
+            <a href="#about" class="aboutIcon">
+                <i class="fas fa-info-circle"></i><span>About</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- News List Section -->
+    <div class="newsList">
+        <!-- News Item 1 -->
+        <div class="newsItem">
+            <img src="https://via.placeholder.com/150" alt="News Thumbnail"> <!-- Example Image -->
+            <div class="content">
+                <div class="text">
+                    <div class="newsMeta">
+                        <span>News</span> <span>December 23, 2024</span>
+                    </div>
+                    <h3 class="newsTitle"><a href="#">రాజవొమ్మంగి: చుక్కల జింక మాంసం స్వాధీనం</a></h3>
+                    <p class="newsSummary">
+                        రాజవొమ్మంగి మండలం ముంజవరప్పాడు గ్రామంలో చుక్కల జింక మాంసం స్వాధీనం చేసుకుని 
+                        నలుగురు నిందితులపై వన్యప్రాణుల చట్టం-1972 కింద కేసు నమోదు చేసారని అటవీ శాఖ అధికారి 
+                        రాము ఆదివారం తెలిపారు.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- News Item 2 -->
+        <div class="newsItem">
+            <img src="https://via.placeholder.com/150" alt="News Thumbnail"> <!-- Example Image -->
+            <div class="content">
+                <div class="text">
+                    <div class="newsMeta">
+                        <span>Breaking News</span> <span>December 22, 2024</span>
+                    </div>
+                    <h3 class="newsTitle"><a href="#">తెలంగాణలో భారీ వర్షాలు: నష్టాలు, జాగ్రత్తలు</a></h3>
+                    <p class="newsSummary">
+                        తెలంగాణ రాష్ట్రంలో భారీ వర్షాలు కొనసాగుతుండగా, పలు జిల్లాల్లో చెట్లు పడ్డాయి మరియు 
+                        జననగరాల్లో వరదనీరు ప్రవాహం పెరిగింది. ప్రజలను అప్రమత్తం చేసిన అధికారులు.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- News Item 3 -->
+        <div class="newsItem">
+            <img src="https://via.placeholder.com/150" alt="News Thumbnail"> <!-- Example Image -->
+            <div class="content">
+                <div class="text">
+                    <div class="newsMeta">
+                        <span>Local News</span> <span>December 21, 2024</span>
+                    </div>
+                    <h3 class="newsTitle"><a href="#">ప్రభుత్వ కార్యాలయాల్లో సాంకేతిక విప్లవం</a></h3>
+                    <p class="newsSummary">
+                        ప్రస్తుత ప్రభుత్వ కార్యాలయాల్లో సాంకేతిక విప్లవం చోటుచేసుకుంటున్నందున, డిజిటలైజేషన్ 
+                        ప్రాధాన్యత పెరిగింది. ఈ మార్పు దినసరి పనులను మరింత సమర్థవంతంగా మార్చడానికి దోహదపడుతుంది.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="versionFooter">Version - 1.2</div>
+        <div class="footerContent">© 2024 Qodegen Media. All rights reserved.</div>
+    </footer>
+</body>
+</html>
